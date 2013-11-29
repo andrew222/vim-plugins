@@ -8,7 +8,6 @@ git+https://github.com/MarcWeber/vim-addon-mw-utils.git
 git+https://github.com/jeetsukumaran/vim-buffergator.git
 git+https://github.com/bling/vim-bufferline.git
 git+https://github.com/Lokaltog/vim-easymotion.git
-git+https://github.com/tpope/vim-rails.git
 git+https://github.com/vim-ruby/vim-ruby.git
 git+https://github.com/garbas/vim-snipmate.git
 git+https://github.com/tpope/vim-surround.git
