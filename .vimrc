@@ -23,14 +23,9 @@ source /Users/andrew/.vim/ohmyvim/ohmyvim.vim
 map <F2> :NERDTreeToggle<CR>
 map  <C-l> :tabn<CR>
 
-" EasyMotion
-let g:EasyMotion_leader_key = '<Leader>'
-
 " Tag bar
 nmap <F8> :TagbarToggle<CR>
 
 set tabstop=2
 set shiftwidth=2
 set softtabstop=2
-
-let g:ctrlp_working_path_mode = 'c'
