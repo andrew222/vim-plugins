@@ -23,7 +23,6 @@ source /Users/andrew/.vim/ohmyvim/ohmyvim.vim
 map <F2> :NERDTreeToggle<CR>
 map  <C-l> :tabn<CR>
 
-let g:ackprg = 'ag --nogroup --nocolor --column'
 " Tag bar
 nmap <F8> :TagbarToggle<CR>
 
