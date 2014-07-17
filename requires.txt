@@ -1,5 +1,8 @@
 git+https://github.com/mileszs/ack.vim.git
+git+https://github.com/rking/ag.vim.git
+git+https://github.com/vim-scripts/ctags.vim.git
 git+https://github.com/kien/ctrlp.vim.git
+git+https://github.com/Yggdroot/indentLine.git
 git+https://github.com/scrooloose/nerdcommenter.git
 git+https://github.com/scrooloose/nerdtree.git
 git+https://github.com/majutsushi/tagbar.git
@@ -7,7 +10,9 @@ git+https://github.com/tomtom/tlib_vim.git
 git+https://github.com/MarcWeber/vim-addon-mw-utils.git
 git+https://github.com/jeetsukumaran/vim-buffergator.git
 git+https://github.com/bling/vim-bufferline.git
+git+https://github.com/junegunn/vim-easy-align.git
 git+https://github.com/Lokaltog/vim-easymotion.git
+git+git://github.com/nathanaelkane/vim-indent-guides.git
 git+https://github.com/vim-ruby/vim-ruby.git
 git+https://github.com/garbas/vim-snipmate.git
 git+https://github.com/tpope/vim-surround.git
