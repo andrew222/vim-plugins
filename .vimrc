@@ -15,7 +15,7 @@ let profiles = ['defaults']
 let g:ohmyvim="oh-my-vim"
 
 " load oh-my-vim
-source /Users/andrew/.vim/ohmyvim/ohmyvim.vim
+source /home/andrew/.vim/ohmyvim/ohmyvim.vim
 
 " End of oh-my-vim required stuff
 
@@ -25,6 +25,13 @@ map  <C-l> :tabn<CR>
 
 " Tag bar
 nmap <F8> :TagbarToggle<CR>
+
+" Normal Mode时用tab, shift-tab做缩进
+nmap <tab> v>
+nmap <s-tab> v<
+" Visual Mode时用tab, shift-tab做缩进
+vmap <tab> v>
+vmap <s-tab> v<
 
 set tabstop=2
 set shiftwidth=2
