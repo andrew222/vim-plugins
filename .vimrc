@@ -32,6 +32,8 @@ nmap <s-tab> v<
 " Visual Mode时用tab, shift-tab做缩进
 vmap <tab> v>
 vmap <s-tab> v<
+"以缩进作为代码折叠规则（还可以选manual）
+set foldmethod=indent
 
 set tabstop=2
 set shiftwidth=2
