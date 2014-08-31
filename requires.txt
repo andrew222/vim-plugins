@@ -4,7 +4,6 @@ git+https://github.com/garbas/vim-snipmate.git
 git+https://github.com/terryma/vim-multiple-cursors.git
 git+https://github.com/scrooloose/nerdtree.git
 git+https://github.com/mileszs/ack.vim.git
-git+git://github.com/nathanaelkane/vim-indent-guides.git
 git+https://github.com/scrooloose/nerdcommenter.git
 git+https://github.com/Lokaltog/vim-easymotion.git
 git+https://github.com/junegunn/vim-easy-align.git
