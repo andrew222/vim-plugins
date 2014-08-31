@@ -22,6 +22,7 @@ source /home/andrew/.vim/ohmyvim/ohmyvim.vim
 " Put your custom stuff bellow
 map <F2> :NERDTreeToggle<CR>
 map  <C-l> :tabn<CR>
+map  <C-h> :tabp<CR>
 
 " Tag bar
 nmap <F8> :TagbarToggle<CR>
