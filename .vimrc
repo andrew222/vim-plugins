@@ -15,29 +15,31 @@ let profiles = ['defaults']
 let g:ohmyvim="oh-my-vim"
 
 " load oh-my-vim
-source /home/andrew/.vim/ohmyvim/ohmyvim.vim
+source /Users/andrew/.vim/ohmyvim/ohmyvim.vim
 
 " End of oh-my-vim required stuff
 
 " Put your custom stuff bellow
+map <C-c> "+y<CR>
 map <F2> :NERDTreeToggle<CR>
 map  <C-l> :tabn<CR>
-map  <C-h> :tabp<CR>
+
+let g:indentLine_loaded = 1
+let g:indentLine_color_gui = '#A4E57E'
+let g:indentLine_char = '¦'
+
+nnoremap <F3> :set invpaste paste?<CR>
+imap <F3> <C-O>:set invpaste paste?<CR>
+set pastetoggle=<F3>
+set cul "设置光标所在行显示横线
+
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " Tag bar
 nmap <F8> :TagbarToggle<CR>
 
-" Normal Mode时用tab, shift-tab做缩进
-nmap <tab> v>
-nmap <s-tab> v<
-" Visual Mode时用tab, shift-tab做缩进
-vmap <tab> v>
-vmap <s-tab> v<
-"以缩进作为代码折叠规则（还可以选manual）
-set foldmethod=indent
-
 set tabstop=2
-set shiftwidth=2
+set sw=2
 set softtabstop=2
 function! ClearRegisters()
     let regs='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-="'
@@ -49,7 +51,7 @@ function! ClearRegisters()
 endfunction
                              
 command! ClearRegisters call ClearRegisters()
-" Start interactive EasyAlign in visual mode (e.g. vip<Enter>)
-vmap <Enter> <Plug>(EasyAlign)
-" Start interactive EasyAlign for a motion/text object (e.g. <Leader>aip)
-nmap <Leader>a <Plug>(EasyAlign)
+filetype plugin indent on
+syntax on
+set background=dark
+colorscheme solarized
