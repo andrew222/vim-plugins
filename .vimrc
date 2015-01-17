@@ -27,7 +27,7 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'https://github.com/tpope/vim-surround.git'
 Plugin 'https://github.com/bronson/vim-trailing-whitespace.git'
 Plugin 'https://github.com/tpope/vim-rails.git'
-Plugin 'Shougo/neocomplete.vim'
+Plugin 'bling/vim-airline'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -46,8 +46,11 @@ map  <C-l> :tabn<CR>
 " enable indentLine
 let g:indentLine_char = '┊'
 
-" enable neocomplete
-" let g:neocomplete#enable_at_startup = 1
+" easymotion config
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
 
 nnoremap <F3> :set invpaste paste?<CR>
 imap <F3> <C-O>:set invpaste paste?<CR>
@@ -65,12 +68,12 @@ set shiftwidth=2
 set softtabstop=2
 
 function! ClearRegisters()
-    let regs='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-="'
-    let i=0
-    while (i<strlen(regs))
-        exec 'let @'.regs[i].'=""'
-        let i=i+1
-    endwhile
+  let regs='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-="'
+  let i=0
+  while (i<strlen(regs))
+    exec 'let @'.regs[i].'=""'
+    let i=i+1
+  endwhile
 endfunction
                              
 command! ClearRegisters call ClearRegisters()
@@ -78,3 +81,8 @@ filetype plugin indent on
 syntax on
 "set background=light
 "colorscheme solarized
+" Always show statusline
+set laststatus=2
+set rtp+=/usr/local/lib/python2.7/dist-packages/powerline_status-dev_e02e6dc1c7a8a5fdfd51ba8465a0d1dad2d5671c-py2.7.egg/powerline/bindings/vim
+" Use 256 colours (Use this setting only if your terminal supports 256 colours)
+set t_Co=256
