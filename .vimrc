@@ -28,6 +28,8 @@ Plugin 'bling/vim-airline'
 Plugin 'vimoutliner/vimoutliner'
 Plugin 'tpope/vim-fugitive'
 Plugin 'rainerborene/vim-reek'
+Plugin 'godlygeek/tabular'
+Plugin 'plasticboy/vim-markdown'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -103,3 +105,5 @@ set laststatus=2
 let g:Powerline_symbols = 'fancy'
 " ruby best practice check plugin should gem install reek first
 let g:reek_on_loading = 0
+
+let g:vim_markdown_folding_disabled=1
