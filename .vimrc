@@ -8,6 +8,7 @@ Plugin 'https://github.com/mattn/gist-vim.git'
 Plugin 'https://github.com/mattn/webapi-vim.git'
 Plugin 'https://github.com/yegappan/mru.git'
 Plugin 'kien/ctrlp.vim'
+Plugin 'Yggdroot/indentLine'
 Plugin 'Valloric/YouCompleteMe'
 Plugin 'https://github.com/scrooloose/nerdcommenter.git'
 Plugin 'scrooloose/nerdtree'
@@ -47,6 +48,7 @@ map  <C-l> :tabn<CR>
 
 " enable indentLine
 let g:indentLine_char = '┊'
+let g:indentLine_enabled = 1
 
 " custom ctrlp
 let g:ctrlp_custom_ignore = {
@@ -100,10 +102,12 @@ endfunction
                              
 command! ClearRegisters call ClearRegisters()
 syntax on
-source /Library/Python/2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
+"source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
 " ruby best practice check plugin should gem install reek first
 let g:reek_on_loading = 0
 
 let g:vim_markdown_folding_disabled=1
+set foldmethod=indent
+set nofoldenable
