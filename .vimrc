@@ -31,6 +31,8 @@ Plugin 'tpope/vim-fugitive'
 Plugin 'rainerborene/vim-reek'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'tpope/vim-bundler'
+Plugin 'jiangmiao/auto-pairs'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
@@ -90,6 +92,7 @@ nmap <F8> :TagbarToggle<CR>
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+set backspace=indent,eol,start
 
 function! ClearRegisters()
     let regs='abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789/-="'
@@ -99,10 +102,9 @@ function! ClearRegisters()
         let i=i+1
     endwhile
 endfunction
-                             
+
 command! ClearRegisters call ClearRegisters()
 syntax on
-"source /usr/local/lib/python2.7/site-packages/powerline/bindings/vim/plugin/powerline.vim
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
 " ruby best practice check plugin should gem install reek first
@@ -111,3 +113,6 @@ let g:reek_on_loading = 0
 let g:vim_markdown_folding_disabled=1
 set foldmethod=indent
 set nofoldenable
+set clipboard=unnamed
+let g:solarized_termcolors = 256
+let g:AutoPairsMapCR = 1
