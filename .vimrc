@@ -89,9 +89,13 @@ let MRU_Auto_Close = 0
 " Tag bar
 nmap <F8> :TagbarToggle<CR>
 
+" switch between case sensitive and insensitive search
+nmap <F9> :set ignorecase! ignorecase?
+
 set expandtab
 set shiftwidth=2
 set softtabstop=2
+" fix backspace/delete key problem
 set backspace=indent,eol,start
 
 function! ClearRegisters()
@@ -109,6 +113,7 @@ set laststatus=2
 let g:Powerline_symbols = 'fancy'
 " ruby best practice check plugin should gem install reek first
 let g:reek_on_loading = 0
+let maplocalleader = '\\'
 
 let g:vim_markdown_folding_disabled=1
 set foldmethod=indent
@@ -116,3 +121,4 @@ set nofoldenable
 set clipboard=unnamed
 let g:solarized_termcolors = 256
 let g:AutoPairsMapCR = 1
+let g:AutoPairsMapSpace = 1
