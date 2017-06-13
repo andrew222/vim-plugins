@@ -4,8 +4,8 @@ call vundle#begin()
 " let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 Plugin 'https://github.com/rking/ag.vim.git'
-Plugin 'https://github.com/mattn/gist-vim.git'
-Plugin 'https://github.com/mattn/webapi-vim.git'
+" Plugin 'https://github.com/mattn/gist-vim.git'
+" Plugin 'https://github.com/mattn/webapi-vim.git'
 Plugin 'https://github.com/yegappan/mru.git'
 Plugin 'kien/ctrlp.vim'
 Plugin 'Yggdroot/indentLine'
@@ -19,25 +19,27 @@ Plugin 'https://github.com/jeetsukumaran/vim-buffergator.git'
 Plugin 'https://github.com/kchmck/vim-coffee-script.git'
 Plugin 'https://github.com/Lokaltog/vim-easymotion.git'
 Plugin 'https://github.com/terryma/vim-multiple-cursors.git'
-Plugin 'https://github.com/vim-ruby/vim-ruby.git'
+" Plugin 'https://github.com/vim-ruby/vim-ruby.git'
 Plugin 'honza/vim-snippets'
 Plugin 'garbas/vim-snipmate'
+" Surround your code :)
 Plugin 'https://github.com/tpope/vim-surround.git'
 Plugin 'https://github.com/bronson/vim-trailing-whitespace.git'
 Plugin 'https://github.com/tpope/vim-rails.git'
 Plugin 'bling/vim-airline'
-Plugin 'vimoutliner/vimoutliner'
 Plugin 'tpope/vim-fugitive'
 Plugin 'rainerborene/vim-reek'
 Plugin 'godlygeek/tabular'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'tpope/vim-bundler'
 Plugin 'jiangmiao/auto-pairs'
+Plugin 'ngmy/vim-rubocop'
 
 call vundle#end()            " required
 filetype plugin indent on    " required
 " Change the default leader
-" let mapleader = ","
+let mapleader = "\\"
+nnoremap <leader>d dd
 
 " Use :OhMyVim profiles to list all available profiles with a description
 " let profiles = ['defaults', 'django', 'erl', 'friendpaste', 'git', 'makefile', 'map', 'pyramid', 'python', 'ranger', 'tmpl', 'utf8']
@@ -91,6 +93,8 @@ nmap <F8> :TagbarToggle<CR>
 
 " switch between case sensitive and insensitive search
 nmap <F9> :set ignorecase! ignorecase?
+" Reveal file in tree
+nmap ,f :NERDTreeFind<CR>
 
 set expandtab
 set shiftwidth=2
@@ -108,6 +112,7 @@ function! ClearRegisters()
 endfunction
 
 command! ClearRegisters call ClearRegisters()
+" Syntax highlighting and theme
 syntax on
 set laststatus=2
 let g:Powerline_symbols = 'fancy'
@@ -122,3 +127,8 @@ set clipboard=unnamed
 let g:solarized_termcolors = 256
 let g:AutoPairsMapCR = 1
 let g:AutoPairsMapSpace = 1
+
+" When opening a file with <cr>, |CtrlP| avoids opening nerdtree
+let g:ctrlp_dont_split = 'nerdtree'
+
+set wildignore+=*/tmp/*,*.so,*.swp,*.zip,*/public/assets/*
